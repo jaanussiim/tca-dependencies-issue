@@ -7,11 +7,61 @@ public enum OffersMode: Int {
     case all = 3
 }
 
-public class OffersClient {
-    private let onLoadOffers: ((OffersMode) async throws -> Void)
-    private let mode: OffersMode
+public struct OffersClient {
+    private let handler: Handler
+    
+    private let allHandler: Handler?
+    private let topHandler: Handler?
     
     public init(
+        mode: OffersMode = .none,
+        onLoadOffers: @escaping (OffersMode) async throws -> Void
+    ) {
+        self.handler = Handler(
+            mode: .none,
+            onLoadOffers: unimplemented()
+        )
+        
+        allHandler = Handler(mode: .all, onLoadOffers: onLoadOffers)
+        topHandler = Handler(mode: .top, onLoadOffers: onLoadOffers)
+    }
+    
+    private init(handler: Handler) {
+        self.handler = handler
+        
+        allHandler = nil
+        topHandler = nil
+    }
+
+    public var allOffers: OffersClient {
+        OffersClient(
+            handler: allHandler!
+        )
+    }
+    
+    public var topOffers: OffersClient {
+        OffersClient(
+            handler: topHandler!
+        )
+    }
+
+    public func loadOffers() async throws {
+        try await handler.loadOffers()
+    }
+    
+    public func loadNextPage() async {
+        await handler.loadNextPage()
+    }
+}
+
+private class Handler {
+    private let onLoadOffers: ((OffersMode) async throws -> Void)
+    private let mode: OffersMode
+
+    private var loadedPage = 0
+    private var hasMore = false
+    
+    init(
         mode: OffersMode = .none,
         onLoadOffers: @escaping (OffersMode) async throws -> Void
     ) {
@@ -19,12 +69,18 @@ public class OffersClient {
         self.onLoadOffers = onLoadOffers
     }
     
-    private(set) public lazy var topOffers = OffersClient(mode: .top, onLoadOffers: onLoadOffers)
-    
     public func loadOffers() async throws {
         precondition(mode != .none)
         
         try await onLoadOffers(mode)
+    }
+    
+    public func loadNextPage() async {
+        await load(page: loadedPage + 1)
+    }
+    
+    private func load(page: Int) async {
+        
     }
 }
 
