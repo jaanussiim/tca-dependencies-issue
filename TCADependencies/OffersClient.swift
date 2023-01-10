@@ -29,15 +29,15 @@ public class OffersClient {
 }
 
 extension OffersClient {
-    public static let unimplemented = OffersClient(
-        onLoadOffers: XCTUnimplemented("onLoadOffers")
+    public static let failing = OffersClient(
+        onLoadOffers: unimplemented("onLoadOffers")
     )
 }
 
 private enum OffersClientKey: DependencyKey {
-    static var liveValue = OffersClient.unimplemented
-    static let previewValue = OffersClient.unimplemented
-    static let testValue = OffersClient.unimplemented
+    static var liveValue = OffersClient.failing
+    static let previewValue = OffersClient.failing
+    static let testValue = OffersClient.failing
 }
 
 extension DependencyValues {
