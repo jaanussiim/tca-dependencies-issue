@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		EA26A8FD296D3B69003807DD /* TCADependenciesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A8FC296D3B69003807DD /* TCADependenciesApp.swift */; };
-		EA26A8FF296D3B69003807DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A8FE296D3B69003807DD /* ContentView.swift */; };
 		EA26A901296D3B6A003807DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26A900296D3B6A003807DD /* Assets.xcassets */; };
 		EA26A904296D3B6A003807DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26A903296D3B6A003807DD /* Preview Assets.xcassets */; };
+		EA26A90C296D3C1A003807DD /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EA26A90B296D3C1A003807DD /* ComposableArchitecture */; };
+		EA26A90E296D3C31003807DD /* OffersClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A90D296D3C31003807DD /* OffersClient.swift */; };
+		EA26A910296D3C5F003807DD /* OffersClient+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A90F296D3C5F003807DD /* OffersClient+Live.swift */; };
+		EA26A913296D3C89003807DD /* XCTestDynamicOverlay in Frameworks */ = {isa = PBXBuildFile; productRef = EA26A912296D3C89003807DD /* XCTestDynamicOverlay */; };
+		EA26A915296D3DB3003807DD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A914296D3DB3003807DD /* Application.swift */; };
+		EA26A917296D3DDC003807DD /* BestOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A916296D3DDC003807DD /* BestOffers.swift */; };
+		EA26A919296D3E65003807DD /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A918296D3E65003807DD /* ApplicationView.swift */; };
+		EA26A91B296D3E8A003807DD /* BestOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26A91A296D3E8A003807DD /* BestOffersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA26A8F9296D3B69003807DD /* TCADependencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCADependencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26A8FC296D3B69003807DD /* TCADependenciesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCADependenciesApp.swift; sourceTree = "<group>"; };
-		EA26A8FE296D3B69003807DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA26A900296D3B6A003807DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA26A903296D3B6A003807DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA26A90D296D3C31003807DD /* OffersClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersClient.swift; sourceTree = "<group>"; };
+		EA26A90F296D3C5F003807DD /* OffersClient+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OffersClient+Live.swift"; sourceTree = "<group>"; };
+		EA26A914296D3DB3003807DD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		EA26A916296D3DDC003807DD /* BestOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestOffers.swift; sourceTree = "<group>"; };
+		EA26A918296D3E65003807DD /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
+		EA26A91A296D3E8A003807DD /* BestOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestOffersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA26A913296D3C89003807DD /* XCTestDynamicOverlay in Frameworks */,
+				EA26A90C296D3C1A003807DD /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +65,15 @@
 		EA26A8FB296D3B69003807DD /* TCADependencies */ = {
 			isa = PBXGroup;
 			children = (
-				EA26A8FC296D3B69003807DD /* TCADependenciesApp.swift */,
-				EA26A8FE296D3B69003807DD /* ContentView.swift */,
+				EA26A914296D3DB3003807DD /* Application.swift */,
+				EA26A918296D3E65003807DD /* ApplicationView.swift */,
 				EA26A900296D3B6A003807DD /* Assets.xcassets */,
+				EA26A916296D3DDC003807DD /* BestOffers.swift */,
+				EA26A91A296D3E8A003807DD /* BestOffersView.swift */,
+				EA26A90D296D3C31003807DD /* OffersClient.swift */,
+				EA26A90F296D3C5F003807DD /* OffersClient+Live.swift */,
 				EA26A902296D3B6A003807DD /* Preview Content */,
+				EA26A8FC296D3B69003807DD /* TCADependenciesApp.swift */,
 			);
 			path = TCADependencies;
 			sourceTree = "<group>";
@@ -83,6 +102,10 @@
 			dependencies = (
 			);
 			name = TCADependencies;
+			packageProductDependencies = (
+				EA26A90B296D3C1A003807DD /* ComposableArchitecture */,
+				EA26A912296D3C89003807DD /* XCTestDynamicOverlay */,
+			);
 			productName = TCADependencies;
 			productReference = EA26A8F9296D3B69003807DD /* TCADependencies.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,10 @@
 				Base,
 			);
 			mainGroup = EA26A8F0296D3B69003807DD;
+			packageReferences = (
+				EA26A90A296D3C1A003807DD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EA26A911296D3C89003807DD /* XCRemoteSwiftPackageReference "xctest-dynamic-overlay" */,
+			);
 			productRefGroup = EA26A8FA296D3B69003807DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA26A8FF296D3B69003807DD /* ContentView.swift in Sources */,
+				EA26A915296D3DB3003807DD /* Application.swift in Sources */,
+				EA26A917296D3DDC003807DD /* BestOffers.swift in Sources */,
+				EA26A910296D3C5F003807DD /* OffersClient+Live.swift in Sources */,
+				EA26A919296D3E65003807DD /* ApplicationView.swift in Sources */,
+				EA26A91B296D3E8A003807DD /* BestOffersView.swift in Sources */,
 				EA26A8FD296D3B69003807DD /* TCADependenciesApp.swift in Sources */,
+				EA26A90E296D3C31003807DD /* OffersClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA26A90A296D3C1A003807DD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.49.1;
+			};
+		};
+		EA26A911296D3C89003807DD /* XCRemoteSwiftPackageReference "xctest-dynamic-overlay" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/xctest-dynamic-overlay";
+			requirement = {
+				kind = exactVersion;
+				version = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA26A90B296D3C1A003807DD /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA26A90A296D3C1A003807DD /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		EA26A912296D3C89003807DD /* XCTestDynamicOverlay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA26A911296D3C89003807DD /* XCRemoteSwiftPackageReference "xctest-dynamic-overlay" */;
+			productName = XCTestDynamicOverlay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA26A8F1296D3B69003807DD /* Project object */;
 }

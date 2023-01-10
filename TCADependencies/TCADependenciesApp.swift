@@ -1,17 +1,17 @@
-//
-//  TCADependenciesApp.swift
-//  TCADependencies
-//
-//  Created by Jaanus Siim on 10.01.2023.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct TCADependenciesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ApplicationView(
+                store: Store(
+                    initialState: Application.State(),
+                    reducer: Application()
+                        .dependency(\.offersClient, .live)
+                )
+            )
         }
     }
 }
